@@ -1,0 +1,25 @@
+El proyecto está dividido en tres carpetas,
+en la carpeta LEXICO se crean dos archivos, uno
+donde se guardan las clases léxicas y otro donde
+se almacenan los errores léxicos. La forma de ejecutarlo es
+
+-- flex lexer.l
+-- gcc lex.yy.c lexer.c -lfl
+-- ./a.out prueba.txt
+
+En lacarpeta SINTACTICO se encuentra el analizador sintáctico
+el cual se ejecuta de la siguiente forma
+
+--  flex lexer.l
+--  bison parserProy.y -d
+--  gcc parserProy.tab.c lex.yy.c main.c -lfl
+--  ./a.out prueba.txt
+
+En la carpeta SEMANTICO se encuentra el analizador semántico
+el cual se ejecuta de la siguiente forma
+
+--  ./yacc.linux -d semantic.y 
+--  gcc attributes.c backpatch.c intermediate_code.c lex.yy.c listaArgs.c pilaTablas.c pilaTipos.c y.tab.c  symtab.c TablaSimbolos.c TablaTipos.c main.c
+--  ./a.out prueba.txt
+
+
