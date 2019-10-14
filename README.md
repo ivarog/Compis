@@ -1,3 +1,3 @@
 # Compilador
 
-# Compilador desarrollado en UNAM como proyecto escolar
+Compilador desarrollado en UNAM como proyecto escolar
